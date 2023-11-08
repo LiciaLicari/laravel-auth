@@ -32,8 +32,8 @@
                         </td>
                         <td>{{ $project->description }}</td>
                         <td class="d-flex gap-2">
-                            <a href="{{ route('admin.projects.show', $project->slug) }}"
-                                class="btn btn-outline-primary"></a>
+                            {{-- <a href="{{ route('admin.projects.show', $project->slug) }}"
+                                class="btn btn-outline-primary"></a> --}}
                             <!-- TO DO edit , delete -->
                         </td>
                     </tr>
