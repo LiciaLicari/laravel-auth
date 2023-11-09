@@ -23,6 +23,7 @@
                 </tr>
             </thead>
             <tbody>
+
                 @forelse ($projects as $project)
                     <tr class="">
                         <td scope="row">{{ $project->id }}</td>
@@ -31,6 +32,7 @@
                             <img width="100" class="img-fluid" src="{{ $project->cover_image }}" alt="">
                         </td>
                         <td>{{ $project->description }}</td>
+
                         <td class="d-flex gap-2">
                             {{-- <a href="{{ route('admin.projects.show', $project->slug) }}"
                                 class="btn btn-outline-primary"></a> --}}
@@ -44,6 +46,6 @@
 
             </tbody>
         </table>
-        <div>{!! $projects->withQueryString()->links('pagination::bootstrap-5') !!}</div>
+        {{ $projects->links('pagination::bootstrap-5') }}
     </div>
 @endsection
