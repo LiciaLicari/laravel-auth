@@ -11,6 +11,10 @@
 
     <h1>Projects Table</h1>
 
+    <div class="d-flex justify-content-between my-4">
+        <a class="btn btn-primary" href="{{ route('admin.projects.create') }}">Add New project</a>
+    </div>
+
     <div class="table-responsive">
         <table class="table table-primary">
             <thead>
@@ -22,7 +26,8 @@
                     <th>Options</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-group-divider">
+
 
                 @forelse ($projects as $project)
                     <tr class="">

@@ -1,10 +1,14 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
     <div class="container">
-        <h2 class="fs-4 text-secondary my-4">
-            {{ __('Dashboard') }}
-        </h2>
+        <div class="d-flex justify-content-between py-4 align-items-center">
+
+            <h2 class="fs-4 text-secondary my-4">
+                {{ __('Dashboard') }}
+            </h2>
+            <a class="btn btn-primary" href="{{ route('admin.projects.index') }}">Table Project</a>
+        </div>
         <div class="row justify-content-center">
             <div class="col">
                 <div class="card">
@@ -17,10 +21,11 @@
                             </div>
                         @endif
 
-                        {{ __('You are logged in!') }}
+                        Welcome {{ Auth::user()->name }}
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 @endsection
