@@ -25,6 +25,8 @@
                         <th scope="col">Title</th>
                         <th scope="col">Image</th>
                         <th scope="col">Description</th>
+                        <th scope="col">Github</th>
+                        <th scope="col">Link</th>
                         <th scope="col">Options</th>
                     </tr>
                 </thead>
@@ -41,18 +43,23 @@
                             </td>
 
                             <td> {{ $project->description }} </td>
+                            <td> <a href=""> {{ $project->github }} </a></td>
+                            <td> <a href=""> {{ $project->link }} </a> </td>
 
-                            <td scope="row" class="py-5 d-flex gap-2 h-100">
-                                <a href=" {{ route('admin.projects.show', $project->slug) }} "
-                                    class="btn btn-outline-primary">View</a>
-                                <a href=" {{ route('admin.projects.edit', $project->slug) }} "
-                                    class="btn btn-outline-success">Edit</a>
+                            <td scope="row" class="py-5 gap-2 h-100">
+                                <div class="d-flex gap-2 align-items-center justify-content-center">
 
-                                <!-- Modal trigger button -->
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
-                                    data-bs-target="#modalId-{{ $project->id }}">
-                                    Delete
-                                </button>
+                                    <a href=" {{ route('admin.projects.show', $project->slug) }} "
+                                        class="btn btn-outline-primary">View</a>
+                                    <a href=" {{ route('admin.projects.edit', $project->slug) }} "
+                                        class="btn btn-outline-success">Edit</a>
+
+                                    <!-- Modal trigger button -->
+                                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                        data-bs-target="#modalId-{{ $project->id }}">
+                                        Delete
+                                    </button>
+                                </div>
 
                                 <!-- Modal Body -->
                                 <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
