@@ -33,16 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h4 class="card-title">About me</h4>
-                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores,
-                            exercitationem sint laborum magni nam fugit laboriosam animi repellat corrupti laudantium sit
-                            pariatur debitis ipsum deserunt placeat alias sunt expedita sapiente!</p>
-                    </div>
-                </div>
-            </div>
+
             <div class="col">
                 <div class="card h-100">
                     <div class="card-body">
